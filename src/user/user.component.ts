@@ -7,7 +7,7 @@ import { UserService } from './user.service';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
- // name = 'Angular';
+  // name = 'Angular';
   users = [];
   // model = new User();
   // editmodel = new User();
@@ -19,7 +19,6 @@ export class UserComponent implements OnInit {
   }
   getAllUsers() {
     this.userService.getAllProjectService().subscribe((data: any[]) => {
-     
       this.users = data;
       console.log(JSON.stringify(this.users));
     });
