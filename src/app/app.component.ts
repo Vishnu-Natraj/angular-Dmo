@@ -1,11 +1,12 @@
 import { Component, VERSION } from '@angular/core';
-import { dateTimestampProvider } from 'rxjs/internal/scheduler/dateTimestampProvider';
+import { App } from './app';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  selector: 'my-App',
+  template: `<h1>Hello {{app.name}} [{{app.id}}]!</h1>`,
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
-  name = 'Vishnu '+ Date;
+export class AppComponent {
+  //  name = 'Vishnu ';
+  app = new App('vishnu', 1);
 }
